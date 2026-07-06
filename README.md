@@ -40,6 +40,14 @@ With $S_0 = K = 100$, $r = 5\%$, $\sigma = 20\%$, $T = 1$ year and $N = 100{,}00
 The two methods agree to within ~0.3%. The residual gap is Monte Carlo sampling error,
 which decreases as $1/\sqrt{N}$ — multiplying $N$ by 10 shrinks it by about $\sqrt{10} \approx 3.2$.
 
+### Convergence
+
+Averaging the absolute error over 50 runs at each sample size, the Monte Carlo
+estimate converges to the Black-Scholes reference at the expected $1/\sqrt{N}$ rate.
+On a log-log scale this appears as a straight line, matching the theoretical slope.
+
+![Monte Carlo convergence](convergence.png)
+
 ## Running the project
 
 Requires [uv](https://docs.astral.sh/uv/).
